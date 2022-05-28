@@ -23,3 +23,18 @@ body {
         font-size: 5rem;
     }
 }
+.card-img-top {
+    opacity: 0.75 !important;
+}
+
+.card-img-top:hover {
+    opacity: 1 !important;
+}
+
+.custom_bg {
+    background-color: black;
+}
+
+.card-body {
+    background-color: rgba(236, 236, 236) !important;
+}

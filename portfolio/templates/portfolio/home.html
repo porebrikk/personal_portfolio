@@ -32,6 +32,8 @@
         </div>
 
 <!-- Контейнер с проектами -->
+        <br>
+        <br>
 <div class="container-fluid overflow-hidden text-center">
     <br>
     <div class="row g-5">
@@ -41,14 +43,14 @@
               {% for project in projects %}
                 <div class="col">
                     <div class="card h-100">
-                        <a href="{{ project.url }}"><img src="{{ project.image.url }}" class="card-img-top"
-                                                         alt="{{ project.title }}"></a>
+                        <a href="{{ project.url }}" target="_blank">
+                            <div class="custom_bg">
+                                <img src="{{ project.image.url }}" class="card-img-top"
+                                                         alt="{{ project.title }}">
+                            </div></a>
                         <div class="card-body">
                             <h5 class="card-title">{{ project.title }}</h5>
                             <p class="card-text">{{ project.description }}</p>
-                            {% if project.url %}
-                                <br><a href="{{ project.url }}">Link</a>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
