@@ -11,32 +11,36 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
+    <link rel="stylesheet" href="{% static 'portfolio/custom.css' %}">
 
     <link rel="icon" type="image/png" href="{% static 'portfolio/logo.png' %}">
 
     <title>Personal Portfolio</title>
   </head>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+    <nav class="navbar navbar-light fixed-top navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
           <img src="{% static 'portfolio/logo.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
           Porebrikk
         </a>
-          <ul class="navbar-nav justify-content-end ">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://github.com/porebrikk" target="_blank">GitHub</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://habr.com/ru/users/porebrikk/" target="_blank">Habr</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{% static 'portfolio/exfile.pdf' %}" target="_blank">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{% url 'blog:all_blogs' %}">Blog</a>
-            </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://github.com/porebrikk" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://habr.com/ru/users/porebrikk/" target="_blank">Habr</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% static 'portfolio/exfile.pdf' %}" target="_blank">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'blog:all_blogs' %}">Blog</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>

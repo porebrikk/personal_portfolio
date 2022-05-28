@@ -1,7 +1,11 @@
+<!-- Подключаю базовый шаблон -->
 {% extends 'portfolio/base.html' %}
 
+<!-- Объявляю блок контента -->
 {% block content %}
     {% load static %}
+
+<!-- Заголовок и фото -->
     <div class="container-fluid">
         <div class="row">
             <div class="col"></div>
@@ -27,14 +31,32 @@
             <div class="col"></div>
         </div>
 
-    {% for project in projects %}
-
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
-      <img src="{{ project.image.url }}">
-      {% if project.url %}
-        <br><a href="{{ project.url }}">Link</a>
-      {% endif %}
-
-    {% endfor %}
+<!-- Контейнер с проектами -->
+<div class="container-fluid overflow-hidden text-center">
+    <br>
+    <div class="row g-5">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="row row-cols-1 row-cols-md-2 g-5 px-4">
+              {% for project in projects %}
+                <div class="col">
+                    <div class="card h-100">
+                        <a href="{{ project.url }}"><img src="{{ project.image.url }}" class="card-img-top"
+                                                         alt="{{ project.title }}"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            {% if project.url %}
+                                <br><a href="{{ project.url }}">Link</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <br>
+</div>
 {% endblock %}
