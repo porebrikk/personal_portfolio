@@ -7,29 +7,26 @@
 
 <!-- Заголовок и фото -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <figure class="text-center">
-                    <h2>Hi there! 🖐🏻<br>This is my personal portfolio.</h2>
-                    <br>
-                </figure>
-                <div class="shadow p-0 mb-5 bg-body rounded">
-                    <img src="{% static 'portfolio/my_petersburg_photo.jpg' %}" class="img-fluid"
-                         alt="Verdens verste menneske">
-                </div>
-                <figure class="text-center">
-                  <blockquote class="blockquote">
-                    <p>Denis Barinov</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer">
-                    Backend Python Developer
-                  </figcaption>
-                </figure>
+        <figure class="text-center">
+            <h2>Hi there! 🖐🏻<br>This is my personal portfolio.</h2>
+            <br>
+        </figure>
 
+        <div class="d-flex justify-content-center">
+            <div class="shadow p-0 mb-5 bg-body rounded">
+                <img src="{% static 'portfolio/my_petersburg_photo.jpg' %}" class="img-fluid"
+                             alt="Verdens verste menneske">
             </div>
-            <div class="col"></div>
         </div>
+        <figure class="text-center">
+                <blockquote class="blockquote">
+                <p>Denis Barinov</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Backend Python Developer
+                </figcaption>
+        </figure>
+    </div>
 
 <!-- Контейнер с проектами -->
         <br>

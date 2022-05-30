@@ -38,3 +38,7 @@ body {
 .card-body {
     background-color: rgba(236, 236, 236) !important;
 }
+
+.bg-body {
+    max-width: 50% !important;
+}
