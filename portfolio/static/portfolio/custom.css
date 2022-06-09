@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .navbar-nav .nav-link {
     color: rgba(0,0,0,1) !important;
 }
@@ -9,6 +13,8 @@
 body {
     font-family: 'Lato', sans-serif;
     padding-top: 70px;
+    display: flex;
+    flex-direction: column;
 }
 
 #blogtitle {
@@ -44,7 +50,9 @@ body {
 }
 
 footer {
-   bottom: 0;
-   width: 100%;
-   height: 2.5rem;
+   flex-shrink: 0;
+}
+
+.container-fluid {
+    flex: 1 0 auto;
 }

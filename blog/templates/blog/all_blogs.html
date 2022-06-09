@@ -1,5 +1,5 @@
 {% extends 'portfolio/base.html' %}
-
+{% load static %}
 {% block content %}
     <div class="container-fluid">
         <div class="row">
@@ -10,28 +10,28 @@
                     <h4>I was written {{ blogs.count }} blog{{ blogs.count | pluralize }}</h4>
                     <br>
                 </figure>
-                </div>
-            <div class="col"></div>
-        </div>
-
-<!-- Контейнер с проектами -->
-<div class="container-fluid overflow-hidden">
-    <div class="row g-5">
-        <div class="col-3"></div>
-        <div class="col-6">
-              {% for blog in blogs %}
-                <div class="card p-1 my-4">
-                  <div class="card-header">
-                    <a href="{% url 'blog:detail' blog.id %}"><h4>{{ blog.title }}</h4></a>
-                  </div>
-                  <div class="card-body">
-                    <p class="text-muted">{{ blog.date |date:'M d, Y'|upper }}</p>
-                    <p class="card-text">{{ blog.description | striptags | truncatechars:100 }}</p>
-                  </div>
-                </div>
-              {% endfor %}
-        </div>
-        <div class="col-3"></div>
+            </div>
+        <div class="col"></div>
     </div>
-</div>
+
+    <!-- Контейнер с блогами -->
+    <div class="container-fluid overflow-hidden">
+        <div class="row g-5">
+            <div class="col-3"></div>
+            <div class="col-6">
+                  {% for blog in blogs %}
+                    <div class="card p-1 my-4">
+                      <div class="card-header">
+                        <a href="{% url 'blog:detail' blog.id %}"><h4>{{ blog.title }}</h4></a>
+                      </div>
+                      <div class="card-body">
+                        <p class="text-muted">{{ blog.date |date:'M d, Y'|upper }}</p>
+                        <p class="card-text">{{ blog.description | striptags | truncatechars:100 }}</p>
+                      </div>
+                    </div>
+                  {% endfor %}
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
 {% endblock %}
