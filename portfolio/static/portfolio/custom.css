@@ -56,3 +56,7 @@ footer {
 .container-fluid {
     flex: 1 0 auto;
 }
+
+.img-fluid {
+    width: 45vw;
+}
