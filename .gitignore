@@ -1,6 +1,9 @@
+.idea/
 *.log
 *.pot
 *.pyc
 __pycache__/
-local_settings.py
+personal_portfolio/local_settings.py
 db.sqlite3
+dbsqlite3-journal
+media
